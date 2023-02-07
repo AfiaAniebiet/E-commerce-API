@@ -22,3 +22,5 @@ npm install
 
 - Update Password (Authenticated)
 - Get All Users (Authorized & Authenticated)
+- Get Single User
+- Update User

@@ -5,12 +5,27 @@ const authUser = async (req, res, next) => {
   const token = req.signedCookies.token;
 
   if (!token) {
-    console.log("Token not presente");
+    throw new CustomError.UnauthenticatedError("Authentication failed");
   }
-  console.log("Token available");
-  next();
+  try {
+    const { fullName, userId, role } = isTokenValid({ token });
+    req.user = { fullName, userId, role };
+    next();
+  } catch (error) {
+    throw new CustomError.UnauthenticatedError("Authentication failed");
+  }
+};
+
+const authorizePermissions = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      throw new CustomError.UnauthorizedError("You're not authorized to access this resource.");
+    }
+    next();
+  };
 };
 
 module.exports = {
   authUser,
+  authorizePermissions,
 };

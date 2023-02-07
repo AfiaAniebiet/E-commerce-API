@@ -2,7 +2,7 @@ const User = require("../models/user.model");
 const { StatusCodes } = require("http-status-codes");
 const CustomError = require("../errors");
 const jwt = require("jsonwebtoken");
-const { attachCookiesToResponse } = require("../utils/index");
+const { attachCookiesToResponse, createTokenUser } = require("../utils/index");
 
 // Register new user
 const registerUser = async (req, res, next) => {
@@ -18,7 +18,7 @@ const registerUser = async (req, res, next) => {
   const role = isFirstAccount ? "admin" : "user";
 
   const user = await User.create({ email, fullName, password, role });
-  const tokenUser = { fullName: user.fullName, userId: user._id, email: user.email, role: user.role };
+  const tokenUser = createTokenUser(user);
 
   attachCookiesToResponse({ res, user: tokenUser });
 
@@ -42,7 +42,7 @@ const loginUser = async (req, res, next) => {
     throw new CustomError.UnauthenticatedError("User does not exist.");
   }
 
-  const tokenUser = { fullName: user.fullName, userId: user._id, email: user.email, role: user.role };
+  const tokenUser = createTokenUser(user);
 
   attachCookiesToResponse({ res, user: tokenUser });
 
@@ -55,6 +55,7 @@ const logoutUser = async (req, res, next) => {
     httpOnly: true,
     expires: new Date(Date.now()),
   });
+  res.status(StatusCodes.OK).json({ msg: "You have successfully logged out." });
 };
 
 module.exports = {

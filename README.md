@@ -9,12 +9,15 @@
 ### Getting Started - Install all dependencies
 
 ```
-Run `npm install` in your command line
+Run [`npm install`] in your command line
 ```
 
 ## Routes
 
 ### Auth Route
+
+| Route | Path |
+| ----- | ---- |
 
 - Login
 - Logout

@@ -20,7 +20,7 @@ npm install
 
 ### User Route
 
-- [] Update Password (Authenticated)
-- [] Get All Users (Authorized & Authenticated)
-- [] Get Single User
-- [] Update User
+-[] Update Password (Authenticated)
+-[] Get All Users (Authorized & Authenticated)
+-[] Get Single User
+-[] Update User

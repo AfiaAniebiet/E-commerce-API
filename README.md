@@ -18,9 +18,9 @@ Run [`npm install`] in your command line
 
 | Route   | Path                | Method |
 | ------- | ------------------- | ------ |
-| Login   | /api/v1/auth/login  |
-| Sign-up | /api/v1/auth/signup |
-| Logout  | /api/v1/auth/logout |
+| Login   | /api/v1/auth/login  | POST   |
+| Sign-up | /api/v1/auth/signup | POST   |
+| Logout  | /api/v1/auth/logout | GET    |
 
 - Login
 - Logout

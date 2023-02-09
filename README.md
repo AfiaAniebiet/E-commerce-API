@@ -9,22 +9,18 @@
 ### Getting Started - Install all dependencies
 
 ```
-Run [`npm install`] in your command line
+Run `npm install` in your command line
 ```
 
 ## Routes
 
 ### Auth Route
 
-| Route   | Path                | Method |
-| ------- | ------------------- | ------ |
-| Login   | /api/v1/auth/login  | POST   |
-| Sign-up | /api/v1/auth/signup | POST   |
-| Logout  | /api/v1/auth/logout | GET    |
-
-- Login
-- Logout
-- Sign up
+| -Route- | -Path-              | -Method- |
+| ------- | ------------------- | -------- |
+| Login   | /api/v1/auth/login  | POST     |
+| Sign-up | /api/v1/auth/signup | POST     |
+| Logout  | /api/v1/auth/logout | GET      |
 
 ### User Route
 

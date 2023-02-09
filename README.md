@@ -6,21 +6,23 @@
 - JOI
 - mongoose
 
+### Getting Started - Install all dependencies
+
 ```
-npm install
+Run `npm install` in your command line
 ```
 
 ## Routes
 
 ### Auth Route
 
-- [] Login
-- [] Logout
-- [] Sign up
+- Login
+- Logout
+- Sign up
 
 ### User Route
 
--[] Update Password (Authenticated)
--[] Get All Users (Authorized & Authenticated)
--[] Get Single User
--[] Update User
+- Update Password (Authenticated)
+- Get All Users (Authorized & Authenticated)
+- Get Single User
+- Update User

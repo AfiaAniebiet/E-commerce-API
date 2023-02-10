@@ -1,7 +1,6 @@
 const User = require("../models/user.model");
 const { StatusCodes } = require("http-status-codes");
 const CustomError = require("../errors");
-const jwt = require("jsonwebtoken");
 const { attachCookiesToResponse, createTokenUser } = require("../utils/index");
 
 // Register new user

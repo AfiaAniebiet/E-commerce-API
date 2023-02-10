@@ -18,6 +18,7 @@ const getSingleUser = async (req, res, next) => {
   res.status(StatusCodes.OK).json({ user });
 };
 
+// Displays information about current users
 const showCurrentUser = async (req, res, next) => {
   res.status(StatusCodes.OK).json({ user: req.user });
 };
@@ -26,16 +27,17 @@ const showCurrentUser = async (req, res, next) => {
 const updateUser = async (req, res, next) => {
   const { email, fullName } = req.body;
   if (!email || !fullName) {
-    throw new CustomError.BadRequestError("Provide the necessary values");
+    throw new CustomError.BadRequestError("Please provide all values");
   }
-  const user = await User.findByIdAndUpdate(
-    { _id: req.user.userId },
-    { email, fullName },
-    { new: true, runValidators }
-  );
+  const user = await User.findOne({ _id: req.user.userId });
+
+  user.email = email;
+  user.fullName = fullName;
+
+  await user.save();
+
   const tokenUser = createTokenUser(user);
   attachCookiesToResponse({ res, user: tokenUser });
-
   res.status(StatusCodes.OK).json({ user: tokenUser });
 };
 

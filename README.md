@@ -24,7 +24,9 @@ Run `npm install` in your command line to install all dependencies.
 
 ### User Route
 
-- Update Password (Authenticated)
-- Get All Users (Authorized & Authenticated)
-- Get Single User
-- Update User
+| Route           | Path                          | Method | Description |
+| --------------- | ----------------------------- | ------ | ----------- |
+| Get All Users   | /api/v1/users/                | GET    | Admin       |
+| Get Single User | /api/v1/users/:id             | GET    | Admin       |
+| Update User     | /api/v1/users/:id             | PATCH  | User        |
+| Update Password | /api/v1/users/update-password | POST   | User        |

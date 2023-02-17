@@ -42,3 +42,5 @@ Run `npm install` in your command line to install all dependencies.
 | Create Order       | /api/v1/orders/                | POST   | All Users   |
 | Single Order       | /api/v1/orders/id              | GET    | All Users   |
 | Update Order       | /api/v1/orders/ id             | PATCH  | All Users   |
+
+## Custom Error Handling

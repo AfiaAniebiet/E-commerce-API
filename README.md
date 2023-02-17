@@ -4,11 +4,11 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 
 ## Packages
 
-| Package Name                        | Description                       | Registry                        |
-| ----------------------------------- | --------------------------------- | ------------------------------- |
-| [Express]("https://expressjs.com/") | Node.js web application framework | `npm install express --save`    |
-| mongoose                            | MongoDB ODM                       | `npm install mongoose --save`   |
-| http-status-codes                   | Rich set of HTTP status codes     | `npm install http-status-codes` |
+| Package Name                      | Description                       | Registry                        |
+| --------------------------------- | --------------------------------- | ------------------------------- |
+| [Express](https://expressjs.com/) | Node.js web application framework | `npm install express --save`    |
+| mongoose                          | MongoDB ODM                       | `npm install mongoose --save`   |
+| http-status-codes                 | Rich set of HTTP status codes     | `npm install http-status-codes` |
 
 ### Getting Started - Install all dependencies
 

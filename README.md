@@ -1,6 +1,11 @@
 # E-Commerce API
 
-## Packages used
+## Packages
+
+| Package Name | Description                       | Registry                      |
+| ------------ | --------------------------------- | ----------------------------- |
+| Express      | Node.js web application framework | `npm install express --save`  |
+| mongoose     | MongoDB ODM                       | `npm install mongoose --save` |
 
 - Express
 - JOI

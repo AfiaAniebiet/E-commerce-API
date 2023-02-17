@@ -8,9 +8,7 @@
 
 ### Getting Started - Install all dependencies
 
-```
 Run `npm install` in your command line to install all dependencies.
-```
 
 ## Routes
 

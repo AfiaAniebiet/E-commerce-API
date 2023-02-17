@@ -30,3 +30,11 @@ Run `npm install` in your command line to install all dependencies.
 | Get Single User | /api/v1/users/:id             | GET    | Admin       |
 | Update User     | /api/v1/users/:id             | PATCH  | User        |
 | Update Password | /api/v1/users/update-password | POST   | User        |
+
+### Order Route
+
+| Route              | Path                           | Method | Description  |
+| ------------------ | ------------------------------ | ------ | ------------ |
+| Fetch all Orders   | /api/v1/orders/                | GET    | Admin        |
+| Show all my Orders | /api/v1/orders/showAllMyOrders | GET    | Admin & User |
+| Create Order       | /api/v1/orders/                | POST   | All Users    |

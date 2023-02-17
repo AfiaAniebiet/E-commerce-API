@@ -75,7 +75,7 @@ const createOrder = async (req, res, next) => {
     subtotal,
     tax,
     shippingFee,
-    clietSecret: paymentIntent.client_secret,
+    clientSecret: paymentIntent.client_secret,
     user: req.user.userId,
   });
   res.status(StatusCodes.CREATED).json({ order, clientSecret: order.client_secret });

@@ -2,10 +2,11 @@
 
 ## Packages
 
-| Package Name | Description                       | Registry                      |
-| ------------ | --------------------------------- | ----------------------------- |
-| Express      | Node.js web application framework | `npm install express --save`  |
-| mongoose     | MongoDB ODM                       | `npm install mongoose --save` |
+| Package Name      | Description                       | Registry                        |
+| ----------------- | --------------------------------- | ------------------------------- |
+| Express           | Node.js web application framework | `npm install express --save`    |
+| mongoose          | MongoDB ODM                       | `npm install mongoose --save`   |
+| http-status-codes | Rich set of HTTP status codes     | `npm install http-status-codes` |
 
 - Express
 - JOI

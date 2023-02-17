@@ -18,11 +18,11 @@ Run `npm install` in your command line to install all dependencies.
 
 ### Auth Route
 
-| Route   | Path                | Method |
-| ------- | ------------------- | ------ |
-| Login   | /api/v1/auth/login  | POST   |
-| Sign-up | /api/v1/auth/signup | POST   |
-| Logout  | /api/v1/auth/logout | GET    |
+| Route   | Path                | Method | Description |
+| ------- | ------------------- | ------ | ----------- |
+| Login   | /api/v1/auth/login  | POST   | All Users   |
+| Sign-up | /api/v1/auth/signup | POST   | All Users   |
+| Logout  | /api/v1/auth/logout | GET    | All Users   |
 
 ### User Route
 
@@ -30,15 +30,15 @@ Run `npm install` in your command line to install all dependencies.
 | --------------- | ----------------------------- | ------ | ----------- |
 | Get All Users   | /api/v1/users/                | GET    | Admin       |
 | Get Single User | /api/v1/users/:id             | GET    | Admin       |
-| Update User     | /api/v1/users/:id             | PATCH  | User        |
-| Update Password | /api/v1/users/update-password | POST   | User        |
+| Update User     | /api/v1/users/:id             | PATCH  | All Users   |
+| Update Password | /api/v1/users/update-password | POST   | All Users   |
 
 ### Order Route
 
-| Route              | Path                           | Method | Description  |
-| ------------------ | ------------------------------ | ------ | ------------ |
-| Fetch all Orders   | /api/v1/orders/                | GET    | Admin        |
-| Show all my Orders | /api/v1/orders/showAllMyOrders | GET    | Admin & User |
-| Create Order       | /api/v1/orders/                | POST   | All Users    |
-| Single Order       | /api/v1/orders/id              | GET    | All Users    |
-| Update Order       | /api/v1/orders/ id             | PATCH  | All Users    |
+| Route              | Path                           | Method | Description |
+| ------------------ | ------------------------------ | ------ | ----------- |
+| Fetch all Orders   | /api/v1/orders/                | GET    | Admin       |
+| Show all my Orders | /api/v1/orders/showAllMyOrders | GET    | All Users   |
+| Create Order       | /api/v1/orders/                | POST   | All Users   |
+| Single Order       | /api/v1/orders/id              | GET    | All Users   |
+| Update Order       | /api/v1/orders/ id             | PATCH  | All Users   |

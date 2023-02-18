@@ -44,3 +44,6 @@ Run `npm install` in your command line to install all dependencies.
 | Update Order       | /api/v1/orders/ id             | PATCH  | All Users   |
 
 ## Custom Error Handling
+
+- Authentication (JSON Web Tokens)
+- Authorization (cookie-parser)

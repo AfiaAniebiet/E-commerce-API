@@ -1,3 +1,6 @@
+// Importing node core modules
+const path = require("path");
+
 //Importing third-party modules
 const express = require("express");
 const app = express();
@@ -26,6 +29,9 @@ const orderRoute = require("./routes/order.route");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+
 app.set("trust proxy", 1);
 app.use(
   rateLimiter({
@@ -42,15 +48,17 @@ app.use(morgan("tiny"));
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 
-app.use(express.static("./public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(fileUpload());
 
+//Middleware
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/products", productsRoute);
 app.use("/api/v1/reviews", reviewsRoute);
 app.use("/api/v1/orders", orderRoute);
 
+//Error Handling and Status Code middleware
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
